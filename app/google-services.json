@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "563218514298",
+    "project_id": "tabacohookah-999a0",
+    "storage_bucket": "tabacohookah-999a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563218514298:android:ccf5270ee5530a58cf96c3",
+        "android_client_info": {
+          "package_name": "com.example.tabacohookah"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563218514298-qkas6qe44ch3br8b5d3lf5f82j3pqvd3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIn_2XcxkiJFVuAaeT_9NvPwCWEfK2VFI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563218514298-qkas6qe44ch3br8b5d3lf5f82j3pqvd3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
