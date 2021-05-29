@@ -5,5 +5,15 @@
     <string name="btn_registrar_pantalla">Registrar</string>
     <string name="btn_iniciar_sesion">Login</string>
     <string name="btn_registrarse">Registrarse</string>
-    <string name="imagen">imagen</string>
+    <string name="subir_tabaco">SUBIR TABACO</string>
+    <string name="cerrar_sesion">CERRAR SESION</string>
+    <string name="guardar_cambios">GUARDAR CAMBIOS</string>
+    <string name="tabaco">tabaco</string>
+    <string name="password">Password</string>
+    <string name="confirmacion_password">Confirmacion Password</string>
+    <string name="email">Email</string>
+    <string name="todo">TODO</string>
+    <string name="nueva_mezcla">NUEVA MEZCLA</string>
+    <string name="marca_1">MARCA 1</string>
+
 </resources>
