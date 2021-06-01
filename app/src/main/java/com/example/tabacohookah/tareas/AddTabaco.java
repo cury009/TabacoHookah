@@ -1,8 +1,10 @@
-package com.example.tabacohookah;
+package com.example.tabacohookah.tareas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.tabacohookah.R;
 
 public class AddTabaco extends AppCompatActivity {
 

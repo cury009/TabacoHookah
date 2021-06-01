@@ -8,12 +8,18 @@
     <string name="subir_tabaco">SUBIR TABACO</string>
     <string name="cerrar_sesion">CERRAR SESION</string>
     <string name="guardar_cambios">GUARDAR CAMBIOS</string>
-    <string name="tabaco">tabaco</string>
     <string name="password">Password</string>
     <string name="confirmacion_password">Confirmacion Password</string>
     <string name="email">Email</string>
-    <string name="todo">TODO</string>
     <string name="nueva_mezcla">NUEVA MEZCLA</string>
     <string name="marca_1">MARCA 1</string>
+    <string name="marca">marca</string>
+    <string name="tabaco_1">TABACO 1</string>
+    <string name="tabaco">tabaco</string>
+    <string name="marca_2">MARCA 2</string>
+    <string name="tabaco_2">TABACO 2</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="todo">TODO</string>
+    <string name="nueva_marca">NUEVA MARCA</string>
 
 </resources>

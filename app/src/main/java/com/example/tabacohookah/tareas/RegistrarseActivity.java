@@ -1,4 +1,4 @@
-package com.example.tabacohookah;
+package com.example.tabacohookah.tareas;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.tabacohookah.R;
+import com.example.tabacohookah.utilidades.MainActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -51,7 +53,7 @@ public class RegistrarseActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 // Sign in success, update UI with the signed-in user's information
                                 FirebaseUser user = mAuth.getCurrentUser();
-                                Intent i =  new Intent(getApplicationContext(),MainActivity.class);
+                                Intent i =  new Intent(getApplicationContext(), MainActivity.class);
                                 startActivity(i);
                                 Toast.makeText(getApplicationContext(), "Usuario Creado.",Toast.LENGTH_SHORT).show();
                                 //updateUI(user);
