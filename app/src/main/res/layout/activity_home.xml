@@ -26,6 +26,7 @@
         android:layout_marginRight="60dp"
         android:background="@color/red"
         android:text="@string/cerrar_sesion"
+        android:onClick="cerrarSesion"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"

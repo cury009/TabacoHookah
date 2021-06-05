@@ -38,22 +38,17 @@ public class AddTabaco extends AppCompatActivity {
         startActivityForResult(intent.createChooser(intent,"Seleccione la aplicacion"),10);
     }
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+    protected void onActivityResult(int requestCode10, int resultCode, Intent data) {
+        super.onActivityResult(requestCode10, resultCode, data);
         if(resultCode==RESULT_OK) {
             Uri path= data.getData();
             imagen1.setImageURI(path);
         }
     }
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP_MR1)
-    public void seleccionaTabaco2(View view) {
-        cargarImagen();
-    }
-    protected void onActivityResult2(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(resultCode==RESULT_OK) {
-            Uri path2= data.getData();
-            imagen2.setImageURI(path2);
-        }
-    }
+    //@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP_MR1)
+    /*public void seleccionaTabaco2(View view) {
+
+    }*/
+
+
 }
