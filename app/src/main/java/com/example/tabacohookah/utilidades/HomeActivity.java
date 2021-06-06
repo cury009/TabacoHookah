@@ -46,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
                         dialog.cancel();
                     }
                 });
-        AlertDialog titulo = alerta.create();
+        AlertDialog  titulo = alerta.create();
         titulo.setTitle("Exit");
         titulo.show();
 

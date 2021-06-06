@@ -16,14 +16,14 @@ import com.example.tabacohookah.R;
 public class AddTabaco extends AppCompatActivity {
 
     ImageView imagen1;
-    ImageView imagen2;
+    //ImageView imagen2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_tabaco);
 
         imagen1 = (ImageView) findViewById(R.id.imageTabaco1);
-        imagen2 = (ImageView) findViewById(R.id.imageTabaco2);
+        //imagen2 = (ImageView) findViewById(R.id.imageTabaco2);
     }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP_MR1)
@@ -38,17 +38,14 @@ public class AddTabaco extends AppCompatActivity {
         startActivityForResult(intent.createChooser(intent,"Seleccione la aplicacion"),10);
     }
     @Override
-    protected void onActivityResult(int requestCode10, int resultCode, Intent data) {
-        super.onActivityResult(requestCode10, resultCode, data);
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if(resultCode==RESULT_OK) {
-            Uri path= data.getData();
+            Uri path=data.getData();
             imagen1.setImageURI(path);
         }
     }
-    //@RequiresApi(api = Build.VERSION_CODES.LOLLIPOP_MR1)
-    /*public void seleccionaTabaco2(View view) {
 
-    }*/
 
 
 }
