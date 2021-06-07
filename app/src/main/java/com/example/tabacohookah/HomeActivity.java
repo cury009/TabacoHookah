@@ -1,4 +1,4 @@
-package com.example.tabacohookah.utilidades;
+package com.example.tabacohookah;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,8 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.tabacohookah.R;
-import com.example.tabacohookah.tareas.AddTabaco;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeActivity extends AppCompatActivity {

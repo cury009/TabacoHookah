@@ -21,5 +21,6 @@
     <string name="descripcion">Descripcion</string>
     <string name="todo">TODO</string>
     <string name="nueva_marca">NUEVA MARCA</string>
+    <string name="done">Done</string>
 
 </resources>

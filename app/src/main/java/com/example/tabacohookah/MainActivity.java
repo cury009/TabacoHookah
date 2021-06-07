@@ -1,14 +1,10 @@
-package com.example.tabacohookah.utilidades;
+package com.example.tabacohookah;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-
-import com.example.tabacohookah.tareas.IniciarSesionActivity;
-import com.example.tabacohookah.R;
-import com.example.tabacohookah.tareas.RegistrarseActivity;
 
 public class MainActivity extends AppCompatActivity {
 

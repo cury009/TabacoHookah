@@ -11,19 +11,19 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".tareas.AddTabaco"></activity>
+        android:theme="@style/Theme.AppCompat.Light">
+        <activity android:name=".AddTabaco"></activity>
         <activity
-            android:name=".utilidades.HomeActivity"
+            android:name=".HomeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".tareas.RegistrarseActivity"
+            android:name=".RegistrarseActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".tareas.IniciarSesionActivity"
+            android:name=".IniciarSesionActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".utilidades.MainActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
