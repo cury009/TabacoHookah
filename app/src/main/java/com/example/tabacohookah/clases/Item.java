@@ -34,7 +34,7 @@ public class Item {
         this.id_usuario = id_usuario;
     }
 
-    public Item(int iditem, String tabaco1, String marca1, String tabaco2, String marca2, int id_usuario) {
+    public Item(int iditem, String s, String tabaco1, String marca1, String tabaco2, String marca2, int id_usuario, Object o, Object o1) {
         this.iditem = 0;
         this.tabaco1 = "";
         this.marca1 = "";
@@ -45,7 +45,7 @@ public class Item {
         this.id_usuario = 0;
     }
 
-    public Item(int iditem, String tabaco1, String marca1, String tabaco2, String marca2, String descripcion, int id_usuario) {
+    public Item(int iditem, String s, String tabaco1, String marca1, String tabaco2, String marca2, int descripcion, Bitmap id_usuario) {
         this.iditem = iditem;
         this.tabaco1 = tabaco1;
         this.marca1 = marca1;
@@ -149,5 +149,5 @@ public class Item {
     @Override
     public int hashCode() {
         return Objects.hash(iditem);
-    }
+    } 
 }
