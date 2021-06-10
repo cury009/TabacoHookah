@@ -1,7 +1,11 @@
 package com.example.tabacohookah.clases;
 
 import android.graphics.Bitmap;
+import android.os.Build;
 
+import androidx.annotation.RequiresApi;
+
+import java.sql.Blob;
 import java.util.Objects;
 
 public class Item {
@@ -15,6 +19,8 @@ public class Item {
     private Bitmap foto2;
     private int id_usuario;
 
+
+
     public Bitmap getFoto1() {
         return foto1;
     }
@@ -22,39 +28,28 @@ public class Item {
         return foto2;
     }
 
-    public Item(int iditem, String tabaco1, String marca1, String tabaco2, String marca2, String descripcion, Bitmap foto1, Bitmap foto2, int id_usuario) {
-        this.iditem = iditem;
-        this.tabaco1 = tabaco1;
+    public Item(String marca1, String tabaco1, String marca2, String tabaco2, String descripcion, Bitmap foto1, Bitmap foto2, int id_usuario) {
+        this.iditem = 0;
         this.marca1 = marca1;
-        this.tabaco2 = tabaco2;
+        this.tabaco1 = tabaco1;
         this.marca2 = marca2;
+        this.tabaco2 = tabaco2;
         this.descripcion = descripcion;
         this.foto1 = foto1;
         this.foto2 = foto2;
         this.id_usuario = id_usuario;
     }
 
-    public Item(int iditem, String s, String tabaco1, String marca1, String tabaco2, String marca2, int id_usuario, Object o, Object o1) {
+    public Item(int marca1, String tabaco1, String marca2, String tabaco2, String descripcion, int id_usuario) {
         this.iditem = 0;
-        this.tabaco1 = "";
-        this.marca1 = "";
-        this.marca2 = "";
-        this.descripcion = "";
-        this.foto1 = null;
-        this.foto2 = null;
-        this.id_usuario = 0;
-    }
-
-    public Item(int iditem, String s, String tabaco1, String marca1, String tabaco2, String marca2, int descripcion, Bitmap id_usuario) {
-        this.iditem = iditem;
-        this.tabaco1 = tabaco1;
         this.marca1 = marca1;
-        this.tabaco2 = tabaco2;
+        this.tabaco1 = tabaco1;
         this.marca2 = marca2;
+        this.tabaco2 = tabaco2;
         this.descripcion = descripcion;
-        this.id_usuario = id_usuario;
         this.foto1 = null;
         this.foto2 = null;
+        this.id_usuario = id_usuario;
     }
     //---------------------------------------
 
@@ -146,6 +141,7 @@ public class Item {
         return iditem == item.iditem;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public int hashCode() {
         return Objects.hash(iditem);

@@ -9,8 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.tabacohookah.R;
-import com.example.tabacohookah.HomeActivity;
+import com.example.tabacohookah.clases.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -22,7 +21,10 @@ public class IniciarSesionActivity extends AppCompatActivity {
     private EditText correo;
     private EditText contrasena;
 
+    private FirebaseUser currentUser;
     private FirebaseAuth mAuth;
+
+    private Usuario usuarioConectado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +41,7 @@ public class IniciarSesionActivity extends AppCompatActivity {
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mAuth.getCurrentUser();
+        this.currentUser = mAuth.getCurrentUser();
         //updateUI(currentUser);
     }
 

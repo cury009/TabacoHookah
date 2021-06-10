@@ -84,3 +84,5 @@ public class ListaItemsAdapter extends RecyclerView.Adapter<ItemViewHolder> {
     }
 
 }
+
+

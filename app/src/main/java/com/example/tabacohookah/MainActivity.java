@@ -6,6 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.tabacohookah.IniciarSesionActivity;
+import com.example.tabacohookah.R;
+import com.example.tabacohookah.RegistrarseActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

@@ -9,8 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.tabacohookah.R;
-import com.example.tabacohookah.MainActivity;
+import com.example.tabacohookah.clases.Usuario;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -23,6 +22,7 @@ public class RegistrarseActivity extends AppCompatActivity {
     private EditText correo;
     private EditText contrasena;
     private EditText contrasenaConfirmacion;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +57,8 @@ public class RegistrarseActivity extends AppCompatActivity {
                                 startActivity(i);
                                 Toast.makeText(getApplicationContext(), "Usuario Creado.",Toast.LENGTH_SHORT).show();
                                 //updateUI(user);
+
+
                             } else {
                                 // If sign in fails, display a message to the user.
 

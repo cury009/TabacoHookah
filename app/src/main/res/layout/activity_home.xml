@@ -7,11 +7,12 @@
     tools:context=".HomeActivity">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/rv_items"
         android:layout_width="412dp"
         android:layout_height="534dp"
         android:layout_marginTop="84dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -43,11 +44,11 @@
         android:layout_marginRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/recyclerView">
+        app:layout_constraintTop_toTopOf="@+id/rv_items">
 
         <Button
             android:id="@+id/Addbutton"
-            android:layout_width="189dp"
+            android:layout_width="384dp"
             android:layout_height="match_parent"
 
             android:layout_marginStart="5dp"
@@ -60,17 +61,9 @@
         <Space
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1" /><![CDATA[
 
-        <Button
-            android:id="@+id/Add_Categoria"
-            android:layout_width="182dp"
-            android:layout_height="match_parent"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:background="@color/red"
-            android:text="@string/nueva_marca"
-            android:textColor="@color/white" />
         android:text="NUEVA MARCA" />
+    ]]>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

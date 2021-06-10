@@ -14,10 +14,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.FutureTask;
+import java.util.concurrent.TimeUnit;
 
 public class ItemDB {
-    //-----------------------------------------------------------
-    public static ArrayList<Item> obtenerItems() {
+    //----------------------------------------------------------- obtenerItems de base de datos
+    /*public static ArrayList<Item> obtenerItems(int pagina) {
         Connection conexion = BaseDB.conectarConBaseDeDatos();
         if (conexion == null) {
             return null;
@@ -25,7 +30,8 @@ public class ItemDB {
         ArrayList<Item> itemsDevueltas = new ArrayList<Item>();
         try {
             Statement sentencia = conexion.createStatement();
-            String ordenSQL = "select * from item";
+            int desplazamiento = pagina * ConfiguracionesGenerales.ELEMENTOS_POR_PAGINA;
+            String ordenSQL = "select * from item LIMIT " + desplazamiento  + " , " + ConfiguracionesGenerales.ELEMENTOS_POR_PAGINA;;
             ResultSet resultado = sentencia.executeQuery(ordenSQL);
             while (resultado.next()) {
                 int iditem = resultado.getInt("iditem");
@@ -58,10 +64,59 @@ public class ItemDB {
             Log.i("sql", "error sql");
             return null;
         }
+    }*/
+
+
+    //-------------------------------------------------------------- insertar item en base de datos
+    public static boolean insertarItemTabla(Item i) {
+        Connection conexion = BaseDB.conectarConBaseDeDatos();
+        if (conexion == null) {
+            return false;
+        }
+        //----------------------------
+        try {
+            String ordensql = "INSERT INTO item (marca1,tabaco1,marca2,tabaco2,descripcion,idUsuario) VALUES (?, ?, ?, ?, ?, ?);";
+            PreparedStatement pst = conexion.prepareStatement(ordensql);
+            pst.setString(1, i.getMarca1());
+            pst.setString(2, i.getTabaco1());
+            pst.setString(3, i.getMarca2());
+            pst.setString(4, i.getTabaco2());
+            pst.setString(5, i.getDescripcion());
+            pst.setInt(6, i.getId_usuario());
+            int filasAfectadas = pst.executeUpdate();
+            pst.close();
+            conexion.close();
+            if (filasAfectadas > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (SQLException e) {
+            return false;
+        }
     }
-    //--------------------------------------------------------------
 
-
-
-
+//----------------------------Cantidad Items para paginacion
+    public static int obtenerCantidadItems() {
+        Connection conexion = BaseDB.conectarConBaseDeDatos();
+        if (conexion == null) {
+            return 0;
+        }
+        int cantidadItems = 0;
+        try {
+            Statement sentencia = conexion.createStatement();
+            String ordenSQL = "select count(*) as cantidad from item";
+            ResultSet resultado  = sentencia.executeQuery(ordenSQL);
+            while (resultado.next()) {
+                cantidadItems = resultado.getInt("cantidad");
+            }
+            resultado.close();
+            sentencia.close();
+            conexion.close();
+            return cantidadItems;
+        } catch (SQLException e) {
+            Log.i("sql", "error sql");
+            return 0;
+        }
+    }
 }

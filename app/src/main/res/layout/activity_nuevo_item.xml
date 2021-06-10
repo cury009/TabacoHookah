@@ -97,7 +97,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textViewMarca1"
+                    android:id="@+id/txt_nuevoi_nombreMarca1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -110,11 +110,11 @@
                     android:layout_weight="1" />
 
                 <EditText
-                    android:id="@+id/edtMarca1"
+                    android:id="@+id/edt_nuevoi_nombreMarca1"
                     android:layout_width="235dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:autofillHints=""
+                    android:autofillHints="@string/app_name"
                     android:ems="10"
                     android:hint="@string/marca"
                     android:inputType="textPersonName" />
@@ -133,7 +133,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textViewTabaco1"
+                    android:id="@+id/txt_nuevoi_nombreTabaco1"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -146,7 +146,7 @@
                     android:layout_weight="1" />
 
                 <EditText
-                    android:id="@+id/edtTabaco1"
+                    android:id="@+id/edt_nuevoi_nombreTabaco1"
                     android:layout_width="235dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -170,7 +170,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textViewMarca2"
+                    android:id="@+id/txt_nuevoi_nombreMarca2"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -183,7 +183,7 @@
                     android:layout_weight="1" />
 
                 <EditText
-                    android:id="@+id/edtMarca2"
+                    android:id="@+id/edt_nuevoi_nombreMarca2"
                     android:layout_width="235dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -206,7 +206,7 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/textViewTabaco2"
+                    android:id="@+id/txt_nuevoi_nombreTabaco"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -219,11 +219,11 @@
                     android:layout_weight="1" />
 
                 <EditText
-                    android:id="@+id/edtTabaco2"
+                    android:id="@+id/edt_nuevoi_nombreTabaco2"
                     android:layout_width="235dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:autofillHints=""
+                    android:autofillHints="@string/app_name"
                     android:ems="10"
                     android:hint="@string/tabaco"
                     android:inputType="textPersonName" />
@@ -235,7 +235,7 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/edtDescripcion"
+                    android:id="@+id/edt_nuevoi_descripcion"
                     android:layout_width="match_parent"
                     android:layout_height="86dp"
                     android:layout_margin="10dp"
@@ -245,7 +245,7 @@
                     android:layout_marginEnd="10dp"
                     android:layout_marginRight="10dp"
                     android:layout_marginBottom="10dp"
-                    android:autofillHints=""
+                    android:autofillHints="@string/app_name"
                     android:ems="10"
                     android:gravity="start|top"
                     android:hint="@string/descripcion"
@@ -260,6 +260,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="63dp"
                     android:background="@color/red"
+                    android:onClick="insertarItem"
                     android:text="@string/guardar_cambios"
                     android:textColor="@color/white"
                     android:fontFamily="@font/anton_normal"

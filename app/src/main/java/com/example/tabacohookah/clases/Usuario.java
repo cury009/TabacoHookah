@@ -1,10 +1,14 @@
 package com.example.tabacohookah.clases;
 
 import android.graphics.Bitmap;
+import android.os.Build;
 
+import androidx.annotation.RequiresApi;
+
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Usuario {
+public class Usuario implements Serializable {
     private int idusuario;
     private String nombre;
     private String email;
@@ -85,6 +89,7 @@ public class Usuario {
         return idusuario == usuario.idusuario;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Override
     public int hashCode() {
         return Objects.hash(idusuario);
